@@ -17,9 +17,8 @@ for (let i = 0; i < cells.length; i++) {
 	cells[i].addEventListener('click', cellClicked);
 }
 
-function stopClick() {for (let i = 0; i < cells.length; i++) 
-    cells[i].removeEventListener('click', cellClicked);
-
+function reloadPage() {
+	location.reload();
 }
 
 function cellClicked() {
@@ -47,19 +46,14 @@ function checkForWin() {
 			if (counter == 3) {
                 isGameOver = true
                 alert(player + ' Wins!');
-                stopClick();
+				reloadPage();
             }
             
 		}
     }
     if (turnCounter === 9 && !isGameOver) {
-        alert ("It's Draw")
+		alert ("It's Draw")
+		reloadPage();
     }
     
-} function gameReset () {
-    if (!isGamOver) {
-        turnCounter = 0
-        player = "x"
-        cells
-    }
 }
