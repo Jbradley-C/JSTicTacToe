@@ -1,5 +1,5 @@
 let cells = document.querySelectorAll('.row > div');
-let player = "x";
+let player = "X";
 let turnCounter = 0;
 let isGameOver = false
 let wins = [
@@ -26,10 +26,10 @@ function cellClicked() {
 		event.target.textContent = player;
 		turnCounter++;
 		checkForWin();
-		if (player == 'x') {
-			player = 'o';
+		if (player == 'X') {
+			player = 'O';
 		} else {
-			player = 'x';
+			player = 'X';
 		}
 	} else if (event.target.textContent !== '') {
 		alert('Sorry, That space is taken');
@@ -52,7 +52,7 @@ function checkForWin() {
 		}
     }
     if (turnCounter === 9 && !isGameOver) {
-		alert ("It's Draw")
+		alert ("IT'S A DRAW")
 		reloadPage();
     }
     
